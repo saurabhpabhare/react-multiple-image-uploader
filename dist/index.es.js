@@ -1902,21 +1902,6 @@ CloseOutlined$1.displayName = 'CloseOutlined';
 var CloseOutlined$2 = forwardRef(CloseOutlined$1);
 
 // This icon file is generated automatically.
-var CloudUploadOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "64 64 896 896", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M518.3 459a8 8 0 00-12.6 0l-112 141.7a7.98 7.98 0 006.3 12.9h73.9V856c0 4.4 3.6 8 8 8h60c4.4 0 8-3.6 8-8V613.7H624c6.7 0 10.4-7.7 6.3-12.9L518.3 459z" } }, { "tag": "path", "attrs": { "d": "M811.4 366.7C765.6 245.9 648.9 160 512.2 160S258.8 245.8 213 366.6C127.3 389.1 64 467.2 64 560c0 110.5 89.5 200 199.9 200H304c4.4 0 8-3.6 8-8v-60c0-4.4-3.6-8-8-8h-40.1c-33.7 0-65.4-13.4-89-37.7-23.5-24.2-36-56.8-34.9-90.6.9-26.4 9.9-51.2 26.2-72.1 16.7-21.3 40.1-36.8 66.1-43.7l37.9-9.9 13.9-36.6c8.6-22.8 20.6-44.1 35.7-63.4a245.6 245.6 0 0152.4-49.9c41.1-28.9 89.5-44.2 140-44.2s98.9 15.3 140 44.2c19.9 14 37.5 30.8 52.4 49.9 15.1 19.3 27.1 40.7 35.7 63.4l13.8 36.5 37.8 10C846.1 454.5 884 503.8 884 560c0 33.1-12.9 64.3-36.3 87.7a123.07 123.07 0 01-87.6 36.3H720c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h40.1C870.5 760 960 670.5 960 560c0-92.7-63.1-170.7-148.6-193.3z" } }] }, "name": "cloud-upload", "theme": "outlined" };
-
-// GENERATE BY ./scripts/generate.ts
-
-var CloudUploadOutlined$1 = function CloudUploadOutlined$1(props, ref) {
-  return createElement(Icon, Object.assign({}, props, {
-    ref: ref,
-    icon: CloudUploadOutlined
-  }));
-};
-
-CloudUploadOutlined$1.displayName = 'CloudUploadOutlined';
-var CloudUploadOutlined$2 = forwardRef(CloudUploadOutlined$1);
-
-// This icon file is generated automatically.
 var InboxOutlined = { "icon": { "tag": "svg", "attrs": { "viewBox": "0 0 1024 1024", "focusable": "false" }, "children": [{ "tag": "path", "attrs": { "d": "M885.2 446.3l-.2-.8-112.2-285.1c-5-16.1-19.9-27.2-36.8-27.2H281.2c-17 0-32.1 11.3-36.9 27.6L139.4 443l-.3.7-.2.8c-1.3 4.9-1.7 9.9-1 14.8-.1 1.6-.2 3.2-.2 4.8V830a60.9 60.9 0 0060.8 60.8h627.2c33.5 0 60.8-27.3 60.9-60.8V464.1c0-1.3 0-2.6-.1-3.7.4-4.9 0-9.6-1.3-14.1zm-295.8-43l-.3 15.7c-.8 44.9-31.8 75.1-77.1 75.1-22.1 0-41.1-7.1-54.8-20.6S436 441.2 435.6 419l-.3-15.7H229.5L309 210h399.2l81.7 193.3H589.4zm-375 76.8h157.3c24.3 57.1 76 90.8 140.4 90.8 33.7 0 65-9.4 90.3-27.2 22.2-15.6 39.5-37.4 50.7-63.6h156.5V814H214.4V480.1z" } }] }, "name": "inbox", "theme": "outlined" };
 
 // GENERATE BY ./scripts/generate.ts
@@ -19456,10 +19441,10 @@ var imagesData = [
  *   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  *   copies of the Software, and to permit persons to whom the Software is
  *   furnished to do so, subject to the following conditions:
- 
+
  *   The above copyright notice and this permission notice shall be included in all
  *   copies or substantial portions of the Software.
- 
+
  *   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  *   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  *   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -19469,7 +19454,7 @@ var imagesData = [
  *   SOFTWARE.
  */
 var RMIUploader = function (_a) {
-    var onUpload = _a.onUpload, onSelect = _a.onSelect, onRemove = _a.onRemove, warnMessage = _a.warnMessage, dataSources = _a.dataSources;
+    var onSelect = _a.onSelect, onRemove = _a.onRemove, warnMessage = _a.warnMessage, dataSources = _a.dataSources;
     var _b = useState$1([]), images = _b[0], setImages = _b[1];
     var _c = useState$1([]), selectedImages = _c[0], setSelectedImages = _c[1];
     var maxNumber = 69;
@@ -19514,8 +19499,7 @@ var RMIUploader = function (_a) {
                                 React.createElement(Col, { md: 6 },
                                     React.createElement(Button, { type: "primary", danger: true, style: {
                                             marginRight: 5,
-                                        }, disabled: greaterZeroUpload, onClick: function () { return setImages([]); }, icon: React.createElement(CloseOutlined$2, null), size: "middle" }),
-                                    React.createElement(Button, { disabled: greaterZeroUpload, type: "primary", onClick: function () { return onUpload(images); }, icon: React.createElement(CloudUploadOutlined$2, null), size: "middle" }))))));
+                                        }, disabled: greaterZeroUpload, onClick: function () { return setImages([]); }, icon: React.createElement(CloseOutlined$2, null), size: "middle" }))))));
                 })),
             React.createElement(Col, { span: 14 },
                 React.createElement("div", { className: "media-library" }, dataSources.map(function (img, index) {
@@ -19536,14 +19520,13 @@ var RMIUploader = function (_a) {
                     ")"),
                 " ",
                 "\u00A0\u00A0",
-                React.createElement(Button, { onClick: function () { return onSelect(selectedImages); }, disabled: greaterZeroMedia, type: "primary" }, "Insert into post")))));
+                React.createElement(Button, { onClick: function () { return onSelect(selectedImages); }, disabled: greaterZeroMedia, type: "primary" }, "Link with a product variant")))));
 };
 RMIUploader.defaultProps = {
     dataSources: imagesData,
     warnMessage: "Number of selected images exceed maxNumber",
 };
 RMIUploader.propTypes = {
-    onUpload: propTypes.func,
     onSelect: propTypes.func,
     warnMessage: propTypes.string,
     dataSources: propTypes.array,

@@ -8,10 +8,10 @@
  *   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  *   copies of the Software, and to permit persons to whom the Software is
  *   furnished to do so, subject to the following conditions:
- 
+
  *   The above copyright notice and this permission notice shall be included in all
  *   copies or substantial portions of the Software.
- 
+
  *   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  *   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  *   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -21,7 +21,7 @@
  *   SOFTWARE.
  */
 
-import { CloseOutlined, CloudUploadOutlined } from "@ant-design/icons";
+import { CloseOutlined } from "@ant-design/icons";
 import { Button, Card, Col, Divider, message, Row } from "antd";
 import "antd/dist/antd.css";
 import PropTypes from "prop-types";
@@ -33,7 +33,6 @@ import RMIUploaderProps from "./types";
 import imagesData from "./utils";
 
 const RMIUploader: React.FC<RMIUploaderProps> = ({
-  onUpload,
   onSelect,
   onRemove,
   warnMessage,
@@ -109,13 +108,13 @@ const RMIUploader: React.FC<RMIUploaderProps> = ({
                         icon={<CloseOutlined />}
                         size="middle"
                       />
-                      <Button
+                      {/* <Button
                         disabled={greaterZeroUpload}
                         type="primary"
                         onClick={() => onUpload(images)}
                         icon={<CloudUploadOutlined />}
                         size="middle"
-                      />
+                      /> */}
                     </Col>
                   </Row>
                 </div>
@@ -167,7 +166,7 @@ const RMIUploader: React.FC<RMIUploaderProps> = ({
             disabled={greaterZeroMedia}
             type="primary"
           >
-            Insert into post
+            Link with a product variant
           </Button>
         </Col>
       </Row>
@@ -181,7 +180,6 @@ RMIUploader.defaultProps = {
 };
 
 RMIUploader.propTypes = {
-  onUpload: PropTypes.func,
   onSelect: PropTypes.func,
   warnMessage: PropTypes.string,
   dataSources: PropTypes.array,
